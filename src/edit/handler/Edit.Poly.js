@@ -118,8 +118,8 @@ L.Edit.Poly = L.Handler.extend({
 	},
 	
 	_fireEditStart: function () {
-    		this._poly.fire('editstart');
-  	},
+		this._poly.fire('editstart');
+	},
 
 	_fireEdit: function () {
 		this._poly.edited = true;
