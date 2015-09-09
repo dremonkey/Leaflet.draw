@@ -180,10 +180,12 @@ L.Draw.Feature = L.Handler.extend({
 	// Cancel drawing when the escape key is pressed
 	_cancelDrawing: function (e) {
 		if (e.keyCode === 27) {
+			this._map.fire('draw:drawcancel', { layerType: this.type });
 			this.disable();
 		}
 	}
 });
+
 
 L.Draw.Polyline = L.Draw.Feature.extend({
 	statics: {
